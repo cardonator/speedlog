@@ -31,7 +31,7 @@ class InfluxLogger(object):
                     "sponsor": results["sponsor"]
                 },
                 'tags': {
-                    'server': "unset hostname"
+                    'server': results["server"] if "server" in results else "unset server"
                 }
             }
         ]

@@ -21,6 +21,7 @@ class FastLog(object):
         self.results["download"] = results
         self.results["timestamp"] = arrow.utcnow().datetime
         self.results["sponsor"] = "netflix"
+        self.results["server"] = "netflix"
 
     def get_results(self):
         """ return the results """

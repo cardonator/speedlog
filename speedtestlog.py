@@ -9,6 +9,7 @@ class SpeedTestLog(object):
         "ping": None,
         "timestamp": None,
         "sponsor": None,
+        "server": None,
     }
 
     def execute(self):
@@ -26,6 +27,7 @@ class SpeedTestLog(object):
         self.results["ping"] = results.ping
         self.results["timestamp"] = arrow.get(results.timestamp).datetime
         self.results["sponsor"] = results.server["sponsor"]
+        self.results["server"] = "speedtest"
 
     def get_results(self):
         """ returns the results """
